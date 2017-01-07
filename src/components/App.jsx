@@ -2,10 +2,10 @@ var App = () => (
   <div>
     <Nav />
     <div className="col-md-7">
-      <VideoPlayer/>
+      <VideoPlayer video={{}}/>
     </div>
     <div className="col-md-5">
-      <VideoList/>
+      <VideoList videos={window.exampleVideoData} />
     </div>
   </div>
 );
@@ -14,5 +14,5 @@ var App = () => (
 // `var` declarations will only exist globally where explicitly defined
 window.App = App;
 
-ReactDOM.render(<App />, 
-  document.getElementById("app"));
+// ReactDOM.render(<App />, 
+//   document.getElementById("app"));
