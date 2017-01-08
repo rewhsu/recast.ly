@@ -15,14 +15,20 @@ class App extends React.Component {
     super(props);
 
     // state
-    this.state = {currentVideo: null};
+    this.state = {
+      title: exampleVideoData[0].snippet.title, 
+      description: exampleVideoData[0].snippet.description, 
+      url: "https://www.youtube.com/embed/" + exampleVideoData[0].id.videoId
+    };
   }
 
   onVideoListEntryClick(video) {
+    console.log('clicked');
     this.setState({
-      currentVideo: video
+      title: video.snippet.title,
+      description: video.snippet.description,
+      url: "https://www.youtube.com/embed/" + video.id.videoId
     });
-    console.log(this.state.currentVideo);
   }
 
   render() {
